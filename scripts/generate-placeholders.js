@@ -7,7 +7,7 @@ const restaurants = [
   'a-la-francaise',
   'delice-des-sens'
 ];
-
+  
 const svgTemplate = (name) => `
 <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
   <rect width="400" height="300" fill="#f6f6f6"/>
@@ -28,3 +28,5 @@ restaurants.forEach(name => {
   const svg = svgTemplate(name);
   fs.writeFileSync(path.join(restaurantsDir, `${name}.jpg`), svg);
 }); 
+
+svgTemplate('palette-du-gout');
