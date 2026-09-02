@@ -1,0 +1,67 @@
+.restaurantCard {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+}
+
+.restaurantCardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.restaurantCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.restaurantCardBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #99E2D0;
+  color: #008766;
+  padding: 0.4rem 0.75rem;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  font-weight: 500; 
+}
+
+.restaurantCardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+}
+
+.restaurantCardText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.restaurantCardTitle {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.restaurantCardLocation {
+  margin: 0;
+  font-size: 1rem;
+  color: #353535;
+  font-weight: normal;
+}
+
+.restaurantCardLike {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

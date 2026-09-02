@@ -30,7 +30,6 @@ export default function Home() {
       <section className={styles.restaurants}>
         <div className={styles.restaurantsContent}>
           <h2>Restaurants</h2>
-          
           <div className={styles.restaurantGrid}>
             {restaurentsList}         
           </div>
