@@ -1,10 +1,8 @@
 'use client';
-
 import { useState } from 'react';
 
 export default function RestaurantHeader({ name }) {
   const [isLiked, setIsLiked] = useState(false);
-
   return (
     <div className="restaurantHeader">
       <h2 className="restaurantName">{name}</h2>

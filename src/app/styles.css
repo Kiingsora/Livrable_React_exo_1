@@ -150,7 +150,7 @@
 }
 
 .liked .heartIcon {
-  color: transparent;
+  background: linear-gradient(135deg, #ff79da, #9356dc);
 }
 
 /* Menu Item Component */
