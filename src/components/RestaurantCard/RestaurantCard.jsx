@@ -14,9 +14,12 @@ export default function RestaurantCard({ restaurant }) {
         }
     }
 
+    const badge = restaurant.isNew && (<div className={styles.restaurantCardBadge}> Nouveauté</div>)
+
     return (
         <article className={styles.restaurantCard}>
             <div className={styles.restaurantCardImageWrapper}>
+                {badge}
                 <img className={`${styles.restaurantCardImage}`} src={restaurant.image} alt={"Image du restaurant " + restaurant.name} />
             </div>
             <div key={restaurant.id} className={styles.restaurantCardContent}>
