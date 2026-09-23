@@ -1,6 +1,5 @@
 "use client";
 import styles from "@/app/restaurantCard.module.css";
-import RestaurantHeader from "@/components/RestaurantHeader/RestaurantHeader";
 import React, { useState } from "react";
 
 
@@ -9,9 +8,7 @@ export default function RestaurantCard({ restaurant }) {
     const [status, setIsLiked] = useState(false);
     const handleChange = () => {
         setIsLiked(!status);
-        if (status === true) {
-            const styleHeart = "liked";
-        }
+
     }
 
     const badge = restaurant.isNew && (<div className={styles.restaurantCardBadge}> Nouveauté</div>)
