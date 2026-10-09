@@ -14,6 +14,9 @@
 }
 
 .mainWrapper {
+  width: 100%;
+  max-width: 1055px;
+  margin-inline: auto;
   background: #f6f6f6;
   margin-top: -4rem;
   padding: 2rem 0;
@@ -33,7 +36,7 @@
 }
 
 .contentWrapper {
-  max-width: 1080px;
+  max-width: 698px;
   margin: 0 auto;
   padding: 0 1rem;
   position: relative;
@@ -42,15 +45,15 @@
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .sectionTitle {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   position: relative;
   padding-bottom: 0.5rem;
 }
@@ -76,6 +79,10 @@
   transition: transform 0.2s, box-shadow 0.2s;
   display: block;
   margin: 0 auto;
+  min-width: 186px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .orderButton:hover {
@@ -150,7 +157,7 @@
 }
 
 .liked .heartIcon {
-  background: linear-gradient(135deg, #ff79da, #9356dc);
+  stroke: none;
 }
 
 /* Menu Item Component */
@@ -192,8 +199,13 @@
 .menuItem[data-index="8"] { animation-delay: 0.8s; }
 .menuItem[data-index="9"] { animation-delay: 0.9s; }
 
+.menuItem:last-child {
+  margin-bottom: 0;
+}
+
 .menuItemContent {
   flex: 1;
+  min-width: 0;
   margin-right: 1rem;
   white-space: nowrap;
   overflow: hidden;
@@ -203,6 +215,7 @@
 .menuItemContent h4 {
   margin: 0 0 0.25rem;
   font-size: 1.125rem;
+  font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -210,14 +223,16 @@
 
 .menuItemContent p {
   margin: 0;
-  color: #666;
-  font-size: 0.875rem;
+  color: #000;
+  font-size: 0.9375rem;
+  font-weight: 300;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .price {
+  flex-shrink: 0;
   font-weight: 600;
   margin-left: 0.5rem;
   transition: margin-right 0.3s ease-in-out;
@@ -323,4 +338,39 @@
     flex: 1;
     margin: 0 1rem;
   }
-} 
+}
+
+@media (max-width: 767px) {
+  .heroImage {
+    height: 275px;
+  }
+
+  .mainWrapper {
+    width: calc(100% + 2rem);
+    margin-inline: -1rem;
+    margin-top: -55px;
+    padding-block: 2rem 2.5rem;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .restaurantHeader {
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .restaurantName {
+    text-align: left;
+  }
+
+  .favoriteButton {
+    flex-shrink: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menuItem {
+    animation: none;
+    opacity: 1;
+  }
+}

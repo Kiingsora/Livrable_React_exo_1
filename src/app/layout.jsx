@@ -1,5 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import { Shrikhand } from "next/font/google";
+import { Roboto, Shrikhand } from "next/font/google";
 import "./globals.css";
 import "./styles.css";
 import Link from "next/link";
@@ -8,14 +7,11 @@ import Header from "@/components/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils, faHandshakeAngle } from "@fortawesome/free-solid-svg-icons";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-roboto",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 const shrikhand = Shrikhand({
@@ -32,7 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${shrikhand.variable}`}>
+      <body className={`${roboto.variable} ${shrikhand.variable}`}>
         <div className={styles.page}>
           <Header />
 
