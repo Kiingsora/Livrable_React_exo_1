@@ -15,4 +15,4 @@ export default function MenuItem({ item, index }) {
       </div>
     </div>
   );
-} 
+}   
